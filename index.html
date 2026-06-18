@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Vouchers</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Controle de Vouchers</h1>
+      <p>Cadastre o portador, salve no banco e gere o link de envio pelo WhatsApp.</p>
+
+      <form id="voucherForm">
+        <h2>Dados do solicitante</h2>
+
+        <label>Nome do solicitante</label>
+        <input type="text" id="nomeSolicitante" required />
+
+        <label>ID funcional do solicitante</label>
+        <input type="text" id="idSolicitante" required />
+
+        <h2>Dados do portador</h2>
+
+        <label>Nome completo do portador</label>
+        <input type="text" id="nomePortador" required />
+
+        <label>CPF do portador</label>
+        <input type="text" id="cpfPortador" required placeholder="000.000.000-00" />
+
+        <label>Data de nascimento</label>
+        <input type="date" id="dataNascimento" required />
+
+        <label>Telefone com DDD</label>
+        <input type="text" id="telefone" required placeholder="5599999999999 ou 51999999999" />
+
+        <label>Número do voucher</label>
+        <input type="text" id="numeroVoucher" placeholder="Deixe vazio para gerar automático" />
+
+        <button type="submit">Salvar e gerar WhatsApp</button>
+      </form>
+
+      <div id="resultado" class="resultado escondido"></div>
+    </section>
+
+    <section class="card">
+      <div class="linha-titulo">
+        <h2>Ranking de solicitantes</h2>
+        <button id="btnAtualizarRanking" type="button">Atualizar</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Posição</th>
+            <th>Solicitante</th>
+            <th>ID Func.</th>
+            <th>Qtd.</th>
+          </tr>
+        </thead>
+        <tbody id="rankingBody">
+          <tr>
+            <td colspan="4">Clique em atualizar.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
