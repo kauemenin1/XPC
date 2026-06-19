@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  color: #222;
+  background: #000;
+  color: #fff;
 }
 
 .container {
@@ -18,13 +18,14 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #111;
   padding: 22px;
   border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 2px solid #ff7a00;
 }
 
-h1, h2 {
+h1, h2, p, label {
+  color: #fff;
   margin-top: 0;
 }
 
@@ -41,32 +42,40 @@ label {
 input {
   width: 100%;
   padding: 11px;
-  border: 1px solid #ccc;
+  border: 2px solid #ff7a00;
   border-radius: 8px;
   font-size: 15px;
+  background: #000;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #aaa;
 }
 
 button {
   margin-top: 14px;
   padding: 12px 16px;
-  border: 0;
+  border: 2px solid #ff7a00;
   border-radius: 8px;
-  background: #1f7a4d;
-  color: white;
+  background: #ff7a00;
+  color: #000;
   font-weight: bold;
   cursor: pointer;
 }
 
 button:hover {
-  opacity: 0.9;
+  background: #000;
+  color: #ff7a00;
 }
 
 .resultado {
   margin-top: 18px;
   padding: 14px;
   border-radius: 8px;
-  background: #e8f7ef;
-  border: 1px solid #b7e2c9;
+  background: #111;
+  border: 1px solid #ff7a00;
+  color: #fff;
 }
 
 .resultado a {
@@ -95,14 +104,16 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 14px;
+  color: #fff;
 }
 
 th, td {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ff7a00;
   padding: 10px;
   text-align: left;
 }
 
 th {
-  background: #f1f1f1;
+  background: #1a1a1a;
+  color: #ff7a00;
 }
